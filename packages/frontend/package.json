@@ -1,0 +1,44 @@
+{
+  "name": "@fixitshopcontrol/frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development npm run next:dev",
+    "dev:api": "concurrently 'cross-env NODE_ENV=development npm run next:dev' 'cross-env NODE_ENV=development npm run api'",
+    "build": "next build",
+    "next": "ts-node src/server",
+    "next:dev": "ts-node src/server",
+    "api": "npm run --prefix ../api dev",
+    "lint": "npm run --prefix ../../ lint",
+    "lint:fix": "npm run --prefix ../../ lint:fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "author": "Saul Rosales",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/node": "^7.22.6",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/react-vertical-timeline-component": "^3.3.3",
+    "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
+    "babel-plugin-styled-components": "^2.1.4"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.17",
+    "@fixitshopcontrol/devtools": "1.0.0",
+    "@fixitshopcontrol/authentication": "1.0.0",
+    "@fixitshopcontrol/i18n": "1.0.0",
+    "@fixitshopcontrol/utils": "^1.0.0",
+    "babel-preset-next": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "next": "13.4.12",
+    "react-cookie": "^4.1.1",
+    "styled-components": "^6.0.7"
+  }
+}

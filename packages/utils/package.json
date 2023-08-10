@@ -1,0 +1,35 @@
+{
+  "name": "@fixitshopcontrol/utils",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "cross-env NODE_ENV=production npm-run-all clean compile webpack:production",
+    "build:dev": "cross-env NODE_ENV=development npm-run-all clean compile webpack:development",
+    "clean": "rm -rf ./dist",
+    "compile": "tsc",
+    "lint": "npm run --prefix ../../ lint",
+    "lint:fix": "npm run --prefix ../../ lint:fix",
+    "prepublishOnly": "npm run lint && npm run build",
+    "webpack:development": "webpack --config=../../webpack.config.ts --env mode=development --env type=package --env packageName=utils",
+    "webpack:production": "webpack --config=../../webpack.config.ts --env mode=production --env type=package --env packageName=utils"
+  },
+  "author": "Saul Rosales",
+  "license": "MIT",
+  "dependencies": {
+    "currency-formatter": "^1.5.9",
+    "encoding": "^0.1.13",
+    "isomorphic-fetch": "^3.0.0",
+    "slug": "^8.2.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/currency-formatter": "^1.5.1",
+    "@types/isomorphic-fetch": "^0.0.36",
+    "@types/slug": "^5.0.3",
+    "@types/uuid": "^9.0.0"
+  }
+}

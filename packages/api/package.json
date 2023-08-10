@@ -1,0 +1,42 @@
+{
+  "name": "@fixitshopcontrol/api",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "migrate": "cd src/db && knex migrate:latest",
+    "seed": "cd src/db && knex seed:run"
+  },
+  "author": "Saul Rosales",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/server": "^4.9.0",
+    "@graphql-tools/merge": "9.0.0",
+    "@graphql-tools/schema": "10.0.0",
+    "@fixitshopcontrol/utils": "^1.0.0",
+    "@fixitshopcontrol/authentication": "1.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "graphql": "16.7.1",
+    "graphql-middleware": "6.1.35",
+    "graphql-tag": "2.12.6",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^2.5.1",
+    "pg": "^8.11.1",
+    "pg-hstore": "^2.3.4",
+    "pg-native": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/cors": "^2.8.13",
+    "@types/express-jwt": "^6.0.4",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.4.5",
+    "@types/pg": "^8.10.2",
+    "ts-node-dev": "2.0.0"
+  }
+}
