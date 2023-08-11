@@ -1,5 +1,5 @@
-import { Locale } from '@truecabins/i18n'
-import { ValueOf } from '@truecabins/utils'
+import { Locale } from '@fixitshopcontrol/i18n'
+import { ValueOf } from '@fixitshopcontrol/utils'
 
 export type Mode = 'production' | 'development'
 
@@ -12,6 +12,9 @@ export enum DeploymentType {
 export interface Configuration {
   siteTitle: string
   domainName: string
+  theme?: {
+    defaultTheme: 'light' | 'dark'
+  }
   homeUrl?: string
   hostname?: string
   mode?: string

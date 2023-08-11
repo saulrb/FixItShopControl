@@ -1,4 +1,4 @@
-import { getUserData } from '@truecabins/authentication'
+import { getUserData } from '@fixitshopcontrol/authentication'
 import { NextFunction, Request, Response } from 'express'
 
 import Config from '../../config'

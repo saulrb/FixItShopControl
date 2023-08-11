@@ -13,7 +13,7 @@
     "lint": "npm run --prefix ../../ lint",
     "lint:fix": "npm run --prefix ../../ lint:fix"
   },
-  "author": "Carlos Santana",
+  "author": "Saul Rosales",
   "license": "MIT",
   "devDependencies": {
     "@types/cli-color": "^2.0.2",
@@ -23,6 +23,7 @@
     "@types/webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
+    "@svgr/webpack": "^6.2.1",
     "cli-color": "^2.0.3",
     "css-loader": "^6.8.1",
     "dotenv": "^16.3.1",

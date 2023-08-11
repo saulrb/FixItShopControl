@@ -106,6 +106,33 @@ const getWebpackCommonConfig = (args: ModeArgs): Configuration => {
     }
   })
 
+  if (packageName === 'design-system') {
+    const svgUrlLoaderInclude: Record<string, string[]> = {
+      'design-system': [
+        path.resolve(__dirname, '../../../design-system/src/components/Spinner/loaders'),
+        path.resolve(__dirname, '../../../design-system/src/components/Dialog/icons'),
+        path.resolve(__dirname, '../../../design-system/src/icons')
+      ]
+    }
+
+    const svgrWebpackInclude: Record<string, string[]> = {
+      'design-system': [path.resolve(__dirname, '../../../design-system/src/components/Icon/icons')]
+    }
+
+    rules.push({
+      test: /\.svg$/,
+      oneOf: [
+        {
+          use: 'svg-url-loader',
+          include: configType === 'package' ? svgUrlLoaderInclude[packageName] ?? [] : []
+        },
+        {
+          use: '@svgr/webpack',
+          include: configType === 'package' ? svgrWebpackInclude[packageName] ?? [] : []
+        }
+      ]
+    })
+  }
   if (configType === 'package' && sandbox) {
     rules.push({
       test: /\.(jpe?g|png|gif|svg)$/i,

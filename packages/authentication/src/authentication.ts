@@ -1,4 +1,4 @@
-import { base64, is, security } from '@truecabins/utils'
+import { base64, is, security } from '@fixitshopcontrol/utils'
 import jwt from 'jsonwebtoken'
 
 export const secretKey = 'Tru3C4b1n5'

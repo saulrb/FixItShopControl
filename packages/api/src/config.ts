@@ -6,7 +6,7 @@ import { Configuration } from './types/config'
 // Loading Env vars
 dotenv.config({ path: path.resolve(__dirname, '../.env') })
 
-const domainName = 'truecabins.com'
+const domainName = 'fixitshopcontrol.com'
 
 export const customConfig: Configuration = {
   domainName,

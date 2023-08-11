@@ -6,7 +6,7 @@ import nextJS from 'next'
 import Config from '../config'
 import { initializeApollo } from '../graphql/client'
 import { isConnected } from './middlewares/user'
-import { availableLocales } from '@truecabins/i18n'
+import { availableLocales } from '@fixitshopcontrol/i18n'
 
 const apolloClient = initializeApollo()
 const port = 3000

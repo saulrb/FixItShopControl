@@ -1,4 +1,4 @@
-import { is } from '@truecabins/utils'
+import { is } from '@fixitshopcontrol/utils'
 
 import { Configuration } from './types/config'
 
@@ -7,8 +7,11 @@ const isLocal = process.env.LOCAL === 'true'
 const isLocalProduction = isProduction && isLocal
 
 export const globalConfig: Configuration = {
-  siteTitle: 'True Cabins',
-  domainName: 'truecabins.com',
+  siteTitle: 'Fix It Shop Control',
+  domainName: 'fixitshopcontrol.com',
+  theme: {
+    defaultTheme: 'dark'
+  },
   api: {
     uri: ''
   },

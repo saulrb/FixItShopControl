@@ -28,6 +28,7 @@
     "babel-plugin-styled-components": "^2.1.4"
   },
   "dependencies": {
+    "@fixitshopcontrol/design-system": "1.0.0",
     "@apollo/client": "^3.7.17",
     "@fixitshopcontrol/devtools": "1.0.0",
     "@fixitshopcontrol/authentication": "1.0.0",
@@ -39,6 +40,6 @@
     "express": "^4.18.2",
     "next": "13.4.12",
     "react-cookie": "^4.1.1",
-    "styled-components": "^6.0.7"
+    "styled-components": "^5.3.3"
   }
 }
