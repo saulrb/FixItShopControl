@@ -13,8 +13,8 @@ const config: Knex.Config = {
   pool: {
     min: 2,
     max: 10,
-    afterCreate: function (conn:any, done:any) {
-      conn.query("SET SESSION SCHEMA 'fixshopcontrol';", function(err:any) {
+    afterCreate:  (conn:any, done:any) => {
+      conn.query("SET SESSION SCHEMA 'fixshopcontrol';", (err:any) => {
         if(err) {
           done(err,conn);
         } else {
